@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "Roslindale Display Condensed";
-  src: url("../fonts/Roslindale-DisplayCondensed.otf") format("opentype");
+  src: url("../fonts/RoslindaleDisplayCondensed-Light.otf") format("opentype");
 }
 
 * {
@@ -37,8 +37,8 @@ a {
 
 .btn {
   border: 1px solid $orange;
-  border-radius: 2rem;
-  padding: 1rem 2.5rem;
+  border-radius: $radius;
+  padding: 1.25rem 2.5rem;
   font-size: $font-btn;
 }
 
@@ -59,7 +59,7 @@ a {
   transform: translateX(-50%);
   background-color: $white;
   padding: .5rem;
-  border-radius: 2rem;
+  border-radius: $radius;
 }
 
 .hero {
@@ -67,4 +67,8 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hero__title {
+  max-width: 45vw;
 }
