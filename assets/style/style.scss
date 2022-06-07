@@ -1,0 +1,52 @@
+@import './dist/_var.scss';
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/HelveticaNeue Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roslindale Display Condensed";
+  src: url("../fonts/Roslindale-DisplayCondensed.woff2") format("woff2"),
+    url("../fonts/Roslindale-DisplayCondensed.woff") format("woff");
+}
+
+html, body {
+  background-color: $cream;
+  color: $black;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  font-family: 'Roslindale Display Condensed', serif;
+  font-size: $font-xl;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  border: 1px solid $orange;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  font-size: $font-btn;
+}
+
+.btn--primary {
+  background-color: transparent;
+  color: $black;
+}
+
+.btn--secondary {
+  background-color: $orange;
+  color: $white;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
