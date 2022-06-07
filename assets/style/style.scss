@@ -7,8 +7,12 @@
 
 @font-face {
   font-family: "Roslindale Display Condensed";
-  src: url("../fonts/Roslindale-DisplayCondensed.woff2") format("woff2"),
-    url("../fonts/Roslindale-DisplayCondensed.woff") format("woff");
+  src: url("../fonts/Roslindale-DisplayCondensed.otf") format("opentype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 html, body {
@@ -23,14 +27,18 @@ h1 {
   text-align: center;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
 
 .btn {
   border: 1px solid $orange;
-  border-radius: 25px;
-  padding: 1rem 2rem;
+  border-radius: 2rem;
+  padding: 1rem 2.5rem;
   font-size: $font-btn;
 }
 
@@ -42,6 +50,16 @@ a {
 .btn--secondary {
   background-color: $orange;
   color: $white;
+}
+
+.menu {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $white;
+  padding: .5rem;
+  border-radius: 2rem;
 }
 
 .hero {
