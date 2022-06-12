@@ -37,6 +37,7 @@ a {
 }
 
 main {
+  position: relative;
   padding: 0 50px;
   margin-top: 75px;
 }
@@ -52,10 +53,16 @@ main {
   }
   &--secondary {
     background-color: $orange;
-    color: $white;
+    color: $cream;
   }
-  img {
+  &__img {
     margin-left: .25rem;
+    &--vert {
+      height: 12px;
+    }
+    &--horz {
+      width: 12px;
+    }
   }
 }
 
@@ -108,12 +115,30 @@ main {
 
 .menu {
   position: fixed;
-  bottom: 2rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   background-color: $white;
   padding: .5rem;
   border-radius: $radius;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 .5rem;
+  }
+  &__item {
+    margin: 0 .5rem;
+    font-size: $font-btn;
+    a {
+      color: $black;
+    }
+  }
 }
 
 .hero {
@@ -129,4 +154,8 @@ main {
     padding-top: 3rem;
     width: 100%;
   }
+}
+
+.observations {
+  padding: 200px 3rem;
 }
