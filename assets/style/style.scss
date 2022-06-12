@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("../fonts/HelveticaNeue Light.ttf") format("truetype");
+  src: url("../fonts/HelveticaNeueLt.ttf") format("truetype");
 }
 
 @font-face {
@@ -25,6 +25,7 @@ h1 {
   font-family: 'Roslindale Display Condensed', serif;
   font-size: $font-xl;
   text-align: center;
+  margin: 0;
 }
 
 ul {
@@ -35,21 +36,74 @@ a {
   text-decoration: none;
 }
 
+main {
+  padding: 0 50px;
+  margin-top: 75px;
+}
+
 .btn {
   border: 1px solid $orange;
   border-radius: $radius;
   padding: 1.25rem 2.5rem;
   font-size: $font-btn;
+  &--primary {
+    background-color: transparent;
+    color: $black;
+  }
+  &--secondary {
+    background-color: $orange;
+    color: $white;
+  }
+  img {
+    margin-left: .25rem;
+  }
 }
 
-.btn--primary {
-  background-color: transparent;
-  color: $black;
-}
-
-.btn--secondary {
-  background-color: $orange;
-  color: $white;
+.header {
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  &__logo {
+    height: 1.75rem;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    &__link {
+      font-size: $font-m;
+      font-weight: 400;
+      color: $grey;
+      margin-right: calc(3rem - 15px);
+      display: inline;
+      transition: .3s ease;
+      &:hover {
+        opacity: .75;
+        transition: .3s ease;
+      }
+    }
+    &__list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__item {
+      margin: 0 15px;
+      transition: .3s ease;
+      img {
+        width: 1rem;
+        height: 1rem;
+      }
+      &:hover {
+        opacity: .75;
+        transition: .3s ease;
+      }
+    }
+  }
 }
 
 .menu {
@@ -67,8 +121,12 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.hero__title {
-  max-width: 45vw;
+  &__title {
+    max-width: 50vw;
+    padding-bottom: 3rem;
+  }
+  &__img {
+    padding-top: 3rem;
+    width: 100%;
+  }
 }

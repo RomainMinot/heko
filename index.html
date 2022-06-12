@@ -8,14 +8,26 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
-      <img src="" alt="Logo heko">
-      <nav>
-        <a href="#">How to contact us</a>
-        <ul>
-          <li>Tw</li>
-          <li>In</li>
-          <li>Fb</li>
+    <header class="header">
+      <img class="header__logo" src="#" alt="Logo heko">
+      <nav class="header__nav">
+        <a class="header__nav__link" href="#">How to contact us</a>
+        <ul class="header__nav__list">
+          <li class="header__nav__item">
+            <a target="_blank" href="https://www.twitter.com/">
+              <img src="/assets/img/twitter.svg" alt="Twitter">
+            </a>
+          </li>
+          <li class="header__nav__item">
+            <a target="_blank" href="https://www.instagram.com/">
+              <img src="/assets/img/instagram.svg" alt="Instagram">
+            </a>
+          </li>
+          <li class="header__nav__item">
+            <a target="_blank" href="https://www.facebook.com/">
+              <img src="/assets/img/facebook.svg" alt="Facebook">
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -38,7 +50,10 @@
     <main>
       <section class="hero">
         <h1 class="hero__title">Let's break together the language barrier</h1>
-        <a href="#" class="btn btn--primary">DISCOVER NOW</a>
+        <a href="#" class="btn btn--primary">
+          DISCOVER NOW <img src="/assets/img/arrow_bottom.svg" alt="Arrow bottom">
+        </a>
+        <img class="hero__img" src="#" alt="Heko product">
       </section>
     </main>
     <!-- Scripts -->
