@@ -8,7 +8,9 @@
     <main>
         <Hero />
         <Observations />
+        <Colors />
     </main>
+    <Footer />
 </template>
 
 <script setup>
@@ -103,25 +105,5 @@
         position: relative;
         padding: 0 50px;
         margin-top: 75px;
-    }
-
-    .colors {
-        margin-bottom: 515px;
-        &__head {
-            margin: 0 3rem;
-            margin-bottom: 100px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-        &__pics {
-            height: 415px;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-        }
     }
 </style>

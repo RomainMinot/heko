@@ -1,11 +1,12 @@
 <template>
     <a href="#" class="btn" :class="type == 'primary' ? 'btn--primary' : 'btn--secondary'">
-        {{ text }} <img class="btn__img" :class="orientation == 'horz' ? 'btn__img--horz' : 'btn__img--vert'" :src="arrowSrc" alt="Arrow bottom">
+        {{ text }} <img class="btn__img" :class="orientation == 'vert' ? 'btn__img--vert' : 'btn__img--horz'" :src="arrowSrc" alt="Arrow bottom">
     </a>
 </template>
 
 <script setup>
     import arrowRight from '/assets/img/arrow_right.svg';
+    import arrowRightAlt from '/assets/img/arrow_right_alt.svg';
     import arrowBottom from '/assets/img/arrow_bottom.svg';
 
     const props = defineProps({
@@ -15,7 +16,19 @@
     })
 
     const arrowSrc = computed(() => {
-        return props.orientation == 'horz' ? arrowRight : arrowBottom;
+        let src = null;
+        switch (props.orientation) {
+            case 'horz':
+                src = arrowRight;
+                break;
+            case 'horzAlt':
+                src = arrowRightAlt;
+                break;
+            default:
+                src = arrowBottom;
+                break;
+        }
+        return src;
     })
 </script>
 
@@ -57,10 +70,10 @@
             top: 0px;
             left: 0;
             &--vert {
-            height: 12px;
+                height: 12px;
             }
             &--horz {
-            width: 12px;
+                width: 12px;
             }
         }
     }
