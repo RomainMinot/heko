@@ -14,7 +14,7 @@
 
 <style scoped lang="scss">
     .observations {
-        margin: 200px 3rem;
+        margin: 200px 3.5rem;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;

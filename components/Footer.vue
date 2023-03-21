@@ -13,6 +13,6 @@
         height: 120px;
         width: 100vw;
         display: flex;
-        border-top: 1px solid $black;
+        border-top: 1px solid $black-o;
     }
 </style>

@@ -21,7 +21,7 @@
     .colors {
         margin-bottom: 515px;
         &__head {
-            margin: 0 3rem;
+            margin: 0 3.5rem;
             margin-bottom: 100px;
             display: flex;
             flex-direction: row;
